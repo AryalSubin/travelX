@@ -22,11 +22,7 @@ export default function Home() {
     <div id="ScrollElementId" className="h-full w-full overflow-hidden">
       <Navbar />
       <HomePage />
-      <div
-        data-scroll
-        data-scroll-speed="1.4"
-        className="h-[100vh] w-full bg-zinc-500"
-      ></div>
+     
     </div>
   );
 }
