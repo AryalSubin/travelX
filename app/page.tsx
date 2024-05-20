@@ -1,13 +1,32 @@
+"use client";
 import HomePage from "@/components/Home/Home";
 import Navbar from "@/components/navbar/Navbar";
 import Image from "next/image";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    let locomotiveScroll;
+
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+
+      locomotiveScroll = new LocomotiveScroll({
+        el: document.querySelector("#ScrollElementId"), // Specify your scroll container element
+        smooth: true,
+      });
+    })();
+  }, []);
+
   return (
-    <div className="h-full w-full overflow-hidden">
+    <div id="ScrollElementId" className="h-full w-full overflow-hidden">
       <Navbar />
       <HomePage />
-      <div className="h-[100vh] w-full bg-black"></div>
+      <div
+        data-scroll
+        data-scroll-speed="1.4"
+        className="h-[100vh] w-full bg-zinc-500"
+      ></div>
     </div>
   );
 }

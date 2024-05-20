@@ -1,10 +1,11 @@
 "use client";
 import React, { useRef } from "react";
-import clouds from "@/public/landing/clouds.png";
-import clouds2 from "@/public/landing/clouds2.png";
-import clouds3 from "@/public/landing/clouds3.png";
-import mountain1 from "@/public/landing/mountain1.jpg";
-import mountain2 from "@/public/landing/mountain2.png";
+import clouds from "@/public/landing/clouds22.png";
+// import clouds2 from "@/public/landing/clouds2.png";
+import middleCloud from "@/public/landing/middleCloud.png";
+// import clouds3 from "@/public/landing/clouds3.png";
+import mountain11 from "@/public/landing/mountain11.png";
+import mountain2 from "@/public/landing/mountain22.png";
 import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -18,55 +19,75 @@ function Landing({}: Props) {
   const m1Ref = useRef(null);
   const m2Ref = useRef(null);
   const m3Ref = useRef(null);
-  useGSAP(() => {
-    const t1 = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".parallaxdiv",
-        start: "top top",
-        end: "50% 25%",
-        scrub: 1,
-        markers: true,
-      },
-    });
-    t1.to(
-      m1Ref.current,
-      {
-        // y: "100px",
-        scale: 1,
-      },
-      "parallax"
-    );
-    t1.to(
-      m2Ref.current,
-      {
-        y: "-100px",
-        scale: 1,
-      },
-      "parallax"
-    );
-    t1.to(
-      m3Ref.current,
-      {
-        // y: "150px",
-      },
-      "parallax"
-    );
-  });
+  // useGSAP(() => {
+  //   const t1p = gsap.timeline({
+  //     scrollTrigger: {
+  //       trigger: ".parallaxdiv",
+  //       start: "top top",
+  //       end: "90% 25%",
+  //       scrub: 1,
+  //       // pin: true,
+  //       markers: true,
+  //     },
+  //   });
+  //   // const t1 = gsap.timeline({
+  //   //   scrollTrigger: {
+  //   //     trigger: ".parallaxdiv",
+  //   //     start: "top top",
+  //   //     end: "90% 25%",
+  //   //     scrub: 1,
+  //   //     // markers: true,
+  //   //   },
+  //   // });
+  //   t1p.to(
+  //     m1Ref.current,
+  //     {
+  //       y: "100px",
+  //       // y: 0,
+  //       scale: 1.03,
+  //     },
+
+  //     "parallax"
+  //   );
+  //   t1p.to(
+  //     m2Ref.current,
+  //     {
+  //       y: "-100px",
+  //       // scale: 1,
+  //     },
+  //     "parallax"
+  //   );
+  //   t1p.to(
+  //     m3Ref.current,
+  //     {
+  //       // y: "150px",
+  //     },
+  //     "parallax"
+  //   );
+  // });
   return (
-    <div className="min-h-screen parallaxdiv relative  w-full bg-gray-100">
+    <div
+      data-scroll
+      data-scroll-section
+      className="min-h-screen parallaxdiv relative  w-full bg-gray-700"
+    >
       <div
+        data-scroll
+        data-scroll-speed="-0.5"
         ref={m1Ref}
-        className="h-full overflow-hidden scale-[1.1]  img1 absolute top-0 left-0  w-full "
+        className="h-full  img1 absolute top-0 left-0  w-full "
       >
         <Image
-          className="h-full overflow-hidden w-full object-cover  "
-          src={mountain1}
+          className="h-screen  w-full object-cover  "
+          src={mountain11}
           alt="mountain"
         />
       </div>
       <div
+        data-scroll
+        data-scroll-speed="0.5"
         ref={m2Ref}
-        className="h-full img2 absolute top-[30%] scale-[0.95] left-0  w-full "
+        className="h-full img2 absolute top-[40%]  left-0  w-full "
       >
         <Image
           className="h-full w-full object-cover  "
@@ -75,17 +96,21 @@ function Landing({}: Props) {
         />
       </div>
       <div
+        data-scroll
+        data-scroll-speed="0.6"
         ref={m3Ref}
         className="h-full img3 absolute top-[30%] left-0  w-full "
       >
         <Image
           className="h-full w-full object-cover  "
-          src={clouds}
+          src={middleCloud}
           alt="mountain"
         />
       </div>
       <div
         // ref={m3Ref}
+        data-scroll
+        data-scroll-speed="0"
         className="h-full img3 absolute top-[30%] left-0  w-full "
       >
         <Image
