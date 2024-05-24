@@ -13,6 +13,8 @@ import mountainfiller from "@/public/landing/mountainfill.png";
 import mountainfiller2 from "@/public/landing/mountainfill2.png";
 import secondmountainrange from "@/public/landing/second-mountain-range.png";
 import secondmountainrange2 from "@/public/landing/second-mountain-range2.png";
+import secondmountainrange3 from "@/public/landing/second-mountain-range3.png";
+import sky1 from "@/public/landing/sky1.jpg";
 import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -113,8 +115,8 @@ function Landing({}: Props) {
       data-scroll-section
       className="h-screen  overflow-hidden parallaxdiv relative scale-1 w-full "
     >
-      <div className="absolute top-0 left-0 w-full h-full z-50 text-black">
-        <div className="flex justify-center font-bold scale-[0.4] translate-x-[10%] landingtitle pb-16 h-full text-[8vw] items-center">
+      <div className="absolute top-0 left-0 w-full h-full z-50 text-4xl font-bold   ">
+        <div className="flex justify-center  text-[#676BDE] font-bold scale-[0.4] translate-x-[10%] landingtitle pb-16 h-full text-[8vw] items-center">
           Expedition
         </div>
       </div>
@@ -127,8 +129,8 @@ function Landing({}: Props) {
         className="h-screen bg-fixed scale-[1.2] relative  z-0 w-full"
       >
         <Image
-          className="h-full w-full absolute -top-10 left-0 "
-          src={stars}
+          className="h-full w-full absolute -top-20 left-0 "
+          src={sky1}
           alt="stars"
         />
       </div>
@@ -161,11 +163,11 @@ function Landing({}: Props) {
         data-scroll
         data-scroll-speed="-0.2"
         // ref={m2Ref}
-        className="h-full img2 absolute top-[40%] z-[2]    left-[0%]  w-full "
+        className="h-full img2 absolute top-[20%] z-[2]    left-[0%]  w-full "
       >
         <Image
           className="h-full w-full object-cover  "
-          src={mountainfiller2}
+          src={secondmountainrange3}
           alt="mountain"
         />
       </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import serviceBack from "@/public/services/service_back.jpg";
-import serviceBackimage from "@/public/services/servicebackimage.webp";
+import serviceBackimage from "@/public/services/service_back.jpg";
 import Image from "next/image";
 import "./Services.css";
 import { Icon } from "@iconify/react/dist/iconify.js";
@@ -18,25 +18,28 @@ function Services({}: Props) {
         trigger: ".bgchangediv",
         start: "top 50%",
         end: "80% bottom",
-        markers: true,
+        // markers: true,
         scrub: 2,
       },
     });
-    t1.to(".bgchangediv", {
-      background: "linear-gradient(to bottom right, #525252, #000)",
-    });
+    // t1.to(".bgchangediv", {
+    //   // background: "linear-gradient(to bottom right, #525252, #000)",
+    //   backgroundColor: "transparent",
+    //   color: "#fff",
+    // });
   });
   return (
     <>
-      <div className="h-[180vh]  overflow-hidden">
-        <div className="image-container ">
-          <div className="text h-[80vh] overflow-hidden bg-white absolute top-[0%] -translate-x-[50%]  text-[11vw] leading-[11vw] tracking-wider font-semibold mix-blend-screen px-[60vh] pb-[10vh] text-start text-nowrap  left-[50%]">
+      <div className="h-[100vh]  overflow-hidden">
+        <div className="image-container relative ">
+          {/* <div className="text h-[80vh] overflow-hidden bg-white absolute top-[0%] -translate-x-[50%]  text-[11vw] leading-[11vw] tracking-wider font-semibold mix-blend-screen px-[60vh] pb-[10vh] text-start text-nowrap  left-[50%]">
             <span>
               Explore more <br /> worry less, <br /> always
             </span>
-          </div>
-          <div className="h-[100vh] bgchangediv absolute bottom-0 left-0 w-full ">
-            <div className="h-full w-full flex flex-col items-center gap-16 py-[20vh] px-20 text-white  ">
+          </div> */}
+          <div className="absolute top-0 left-0 bg-black/40 h-full w-full z-20"></div>
+          <div className="h-[100vh] z-30 bgchangediv bg-transparent text-white  absolute bottom-0 left-0 w-full ">
+            <div className="h-full w-full flex flex-col items-center gap-16 py-[20vh] px-20  ">
               <div className="flex flex-col gap-4">
                 <p className="text-4xl  font-bold ">Our services</p>
                 <p className="w-[70%]  ">

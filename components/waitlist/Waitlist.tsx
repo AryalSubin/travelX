@@ -42,7 +42,7 @@ function Waitlist({}: Props) {
       <div
         // data-scroll
         // data-scroll-speed="1"
-        className="h-full pt-32 pb-48 mb-[20vh] waitlist flex justify-center w-full bg-white"
+        className="h-full pt-32 pb-48 waitlist flex justify-center w-full bg-white"
       >
         <div className=" pt-16  flex flex-col gap-4 items-center ">
           <p className="text-5xl waitlisttext1 font-medium">

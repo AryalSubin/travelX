@@ -1,5 +1,6 @@
 "use client";
 import HomePage from "@/components/Home/Home";
+import Footer from "@/components/footer/Footer";
 import Navbar from "@/components/navbar/Navbar";
 import Image from "next/image";
 import { useEffect } from "react";
@@ -22,6 +23,7 @@ export default function Home() {
     <div id="ScrollElementId" className="h-full w-full overflow-hidden">
       <Navbar />
       <HomePage />
+      <Footer />
     </div>
   );
 }
