@@ -15,7 +15,6 @@ function HomePage({}: Props) {
       <Services />
       <PopularTrek />
       <ParallaxTestimonial />
-      
     </div>
   );
 }

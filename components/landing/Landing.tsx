@@ -20,6 +20,8 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 
+import "./Landing.css";
+
 gsap.registerPlugin(ScrollTrigger);
 
 type Props = {};
@@ -115,24 +117,24 @@ function Landing({}: Props) {
       data-scroll-section
       className="h-screen  overflow-hidden parallaxdiv relative scale-1 w-full "
     >
-      <div className="absolute top-0 left-0 w-full h-full z-50 text-4xl font-bold   ">
+      {/* <div className="absolute top-0 left-0 w-full h-full z-50 text-4xl font-bold   ">
         <div className="flex justify-center  text-[#676BDE] font-bold scale-[0.4] translate-x-[10%] landingtitle pb-16 h-full text-[8vw] items-center">
           Expedition
         </div>
-      </div>
+      </div> */}
       <div
         data-scroll
-        data-scroll-speed="-0.85"
+        data-scroll-speed="-0.95"
         // style={{
         //   backgroundImage: `url(${stars})`,
         // }}
-        className="h-screen bg-fixed scale-[1.2] relative  z-0 w-full"
+        className="h-screen landingbgimage bg-fixed scale-[1.2] relative  z-0 w-full"
       >
-        <Image
+        {/* <Image
           className="h-full w-full absolute -top-20 left-0 "
           src={sky1}
           alt="stars"
-        />
+        /> */}
       </div>
       <div className="h-[10rem] w-full bg-gradient-to-t from-white to-transparent  absolute bottom-0 left-0 z-20 "></div>
       <div

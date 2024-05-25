@@ -21,100 +21,102 @@ type Props = {};
 function PopularTrek({}: Props) {
   return (
     <>
-      <div className="w-full text-black h-full bg-white">
-        <div className="w-11/12   mx-auto overflow-hidden h-screen px-5 flex justify-center items-center flex-col">
+      <div className="w-full ">
+        <div className=" overflow-hidden h-screen flex justify-center items-center flex-col">
           {/* title  */}
-          <div className="w-full mb-[2rem] pt-32 flex justify-between  items-center text-nowrap">
-            <span className="font text-2xl md:text-7xl trackong-wider">
-              Our most popular trekking
-            </span>
-            <button className="bg-white h-[2.8rem] text-sm font-medium rounded-full w-[8rem] hover:bg-black border-2 text-black hover:text-white hover:border-white border-black duration-200">
-              View all
-            </button>
-          </div>
+          <div className="h-full w-full bg-white z-50">
+            <div className="w-full  mb-[2rem] bg-white   flex justify-between  items-center text-nowrap">
+              <span className="font text-2xl md:text-7xl trackong-wider">
+                Our most popular trekking
+              </span>
+              <button className="bg-white h-[2.8rem] text-sm font-medium rounded-full w-[8rem] hover:bg-black border-2 text-black hover:text-white hover:border-white border-black duration-200">
+                View all
+              </button>
+            </div>
 
-          <Swiper
-            autoplay={{
-              delay: 2000,
-              disableOnInteraction: false,
-            }}
-            loop={true}
-            breakpoints={{
-              924: {
-                slidesPerView: 2,
-                spaceBetween: 15,
-              },
+            <Swiper
+              autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+              }}
+              loop={true}
+              breakpoints={{
+                924: {
+                  slidesPerView: 2,
+                  spaceBetween: 15,
+                },
 
-              1256: {
-                slidesPerView: 4,
-                spaceBetween: 15,
-              },
-              1576: {
-                slidesPerView: 5,
-                spaceBetween: 15,
-              },
-            }}
-            spaceBetween={50}
-            freeMode={true}
-            pagination={{
-              dynamicBullets: true,
-            }}
-            modules={[FreeMode, Pagination, Autoplay]}
-            className="w-full flex justify-start items-start "
-          >
-            {PopularTrekData.map((item, index) => (
-              <SwiperSlide
-                key={index}
-                className="h-full mt-[-3rem]   flex justify-start items-start"
-              >
-                <CardContainer className=" h-full flex justify-start items-center rounded-xl cursor-pointer">
-                  <Link href="/product_detail">
-                    <CardBody className="flex w-full h-[30rem]  flex-col gap-2">
-                      <CardItem
-                        translateZ="100"
-                        className="w-full h-[95%] rounded-3xl  overflow-hidden"
-                      >
-                        <img
-                          src={item.img}
-                          alt={item.name}
-                          className="w-full h-full object-cover object-center  group-hover/card:shadow-xl"
-                        ></img>
-                      </CardItem>
+                1256: {
+                  slidesPerView: 4,
+                  spaceBetween: 15,
+                },
+                1576: {
+                  slidesPerView: 5,
+                  spaceBetween: 15,
+                },
+              }}
+              spaceBetween={50}
+              freeMode={true}
+              pagination={{
+                dynamicBullets: true,
+              }}
+              modules={[FreeMode, Pagination, Autoplay]}
+              className="w-full flex justify-start items-start "
+            >
+              {PopularTrekData.map((item, index) => (
+                <SwiperSlide
+                  key={index}
+                  className="h-full mt-[-3rem]   flex justify-start items-start"
+                >
+                  <CardContainer className=" h-full flex justify-start items-center rounded-xl cursor-pointer">
+                    <Link href="/product_detail">
+                      <CardBody className="flex w-full h-[30rem]  flex-col gap-2">
+                        <CardItem
+                          translateZ="100"
+                          className="w-full h-[95%] rounded-3xl  overflow-hidden"
+                        >
+                          <img
+                            src={item.img}
+                            alt={item.name}
+                            className="w-full h-full object-cover object-center  group-hover/card:shadow-xl"
+                          ></img>
+                        </CardItem>
 
-                      <div className="flex gap-2  w-full">
-                        {/* desc  */}
-                        <div className="flex flex-col gap-1 ">
-                          <span className="font-semibold text-nowrap text-black text-sm">
-                            {item.name}
-                          </span>
-                          {/* distance  */}
-                          <span className="text-[12px] font-semibold text-zinc-700">
-                            {item.distance}
-                          </span>
+                        <div className="flex gap-2  w-full">
+                          {/* desc  */}
+                          <div className="flex flex-col gap-1 ">
+                            <span className="font-semibold text-nowrap text-black text-sm">
+                              {item.name}
+                            </span>
+                            {/* distance  */}
+                            <span className="text-[12px] font-semibold text-zinc-700">
+                              {item.distance}
+                            </span>
 
-                          {/* days */}
-                          <span className="text-[10px] font-semibold text-zinc-700">
-                            7 days
-                          </span>
-                          {/* rating  */}
-                          <div className="flex gap-1 text-yellow-700 w-full justify-start items-center">
-                            <Icon icon="material-symbols:star" />
-                            <Icon icon="material-symbols:star" />
-                            <Icon icon="material-symbols:star" />
-                            <Icon icon="material-symbols:star" />
+                            {/* days */}
+                            <span className="text-[10px] font-semibold text-zinc-700">
+                              7 days
+                            </span>
+                            {/* rating  */}
+                            <div className="flex gap-1 text-yellow-700 w-full justify-start items-center">
+                              <Icon icon="material-symbols:star" />
+                              <Icon icon="material-symbols:star" />
+                              <Icon icon="material-symbols:star" />
+                              <Icon icon="material-symbols:star" />
+                            </div>
                           </div>
+                          {/* price  */}
+                          <span className="w-full text-end text-[12px] font-semibold text-zinc-900  justify-center  items-end">
+                            {item.price}
+                          </span>
                         </div>
-                        {/* price  */}
-                        <span className="w-full text-end text-[12px] font-semibold text-zinc-900  justify-center  items-end">
-                          {item.price}
-                        </span>
-                      </div>
-                    </CardBody>
-                  </Link>
-                </CardContainer>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+                      </CardBody>
+                    </Link>
+                  </CardContainer>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
       </div>
     </>

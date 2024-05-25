@@ -23,6 +23,7 @@ export default function Home() {
     <div id="ScrollElementId" className="h-full w-full overflow-hidden">
       <Navbar />
       <HomePage />
+      <div className="mt-[70vh]"></div>
       <Footer />
     </div>
   );

@@ -1,11 +1,34 @@
-import React from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import React, { useRef } from "react";
+gsap.registerPlugin(ScrollTrigger);
 
 type Props = {};
 
 function Footer({}: Props) {
+  const footerRef = useRef(null);
+  // useGSAP(() => {
+  //   const tl1 = gsap.timeline({
+  //     scrollTrigger: {
+  //       trigger: footerRef.current,
+  //       markers: true,
+  //       start: "top 90%",
+  //       end: "45% center",
+  //       scrub: 2,
+  //     },
+  //   });
+  //   tl1.from(".footer", {
+  //     height: 0,
+  //     scaleX: 1.1,
+  //   });
+  // });
   return (
-    <div className="min-h-screen flex flex-col justify-between  w-full px-16 pt-16 ">
-      <div className="flex">
+    <div
+      ref={footerRef}
+      className="min-h-[70vh] fixed z-1  bottom-0 bg-zinc-300 flex flex-col justify-between  w-full px-16 pt-16 "
+    >
+      <div className="flex footer overflow-hidden  ">
         <div className="flex flex-1 h-full w-full ">
           <div className="h-full w-full flex flex-col gap-8">
             <p className="text-black font-semibold">travelX</p>
