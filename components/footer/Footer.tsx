@@ -1,4 +1,5 @@
 import { useGSAP } from "@gsap/react";
+import { Icon } from "@iconify/react/dist/iconify.js";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import React, { useRef } from "react";
@@ -26,7 +27,7 @@ function Footer({}: Props) {
   return (
     <div
       ref={footerRef}
-      className="min-h-[70vh] fixed z-1  bottom-0 bg-zinc-300 flex flex-col justify-between  w-full px-16 pt-16 "
+      className="min-h-[70vh] fixed z-1  bottom-0 bg-zinc-50 flex flex-col justify-between  w-full px-16 pt-16 "
     >
       <div className="flex footer overflow-hidden  ">
         <div className="flex flex-1 h-full w-full ">
@@ -63,9 +64,31 @@ function Footer({}: Props) {
           </div>
         </div>
       </div>
-      <div className="flex justify-between py-10 text-gray-400">
-        <div>Terms & conditions | Privacy policy</div>
-        <div>&copy; All right reserved</div>
+      <div className="flex justify-between py-10 text-sm text-gray-400">
+        <div className="flex flex-1">Terms & conditions | Privacy policy</div>
+        <div className="flex flex-1 justify-between">
+          <div className="flex gap-2">
+            <div className="size-[25px]  cursor-pointer ">
+              <Icon
+                className="h-full w-full  hover:scale-[1.10] transition-all duration-150 hover:text-gray-600"
+                icon="eva:facebook-fill"
+              />
+            </div>
+            <div className="size-[25px]  cursor-pointer">
+              <Icon
+                className="size-full  hover:scale-[1.10] transition-all duration-150 hover:text-gray-600"
+                icon="fa6-brands:x-twitter"
+              />
+            </div>
+            <div className="size-[25px]  cursor-pointer">
+              <Icon
+                className="size-full  hover:scale-[1.10] transition-all duration-150 hover:text-gray-600"
+                icon="fa:instagram"
+              />
+            </div>
+          </div>
+          <div>&copy; All right reserved</div>
+        </div>
       </div>
     </div>
   );

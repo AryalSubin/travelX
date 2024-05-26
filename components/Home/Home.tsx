@@ -4,6 +4,7 @@ import Waitlist from "../waitlist/Waitlist";
 import Services from "../services/Services";
 import ParallaxTestimonial from "../testimonials/Testimonial";
 import PopularTrek from "../popularDestinations/PopularDestinations";
+import TopExpeditions from "../top_expeditions/TopExpeditions";
 
 type Props = {};
 
@@ -14,6 +15,7 @@ function HomePage({}: Props) {
       <Waitlist />
       <Services />
       <PopularTrek />
+      <TopExpeditions />
       <ParallaxTestimonial />
     </div>
   );

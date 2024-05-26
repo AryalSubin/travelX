@@ -21,11 +21,11 @@ type Props = {};
 function PopularTrek({}: Props) {
   return (
     <>
-      <div className="w-full ">
+      <div className="w-full  ">
         <div className=" overflow-hidden h-screen flex justify-center items-center flex-col">
           {/* title  */}
-          <div className="h-full w-full bg-white z-50">
-            <div className="w-full  mb-[2rem] bg-white   flex justify-between  items-center text-nowrap">
+          <div className="h-full px-4 sm:px-16 py-8 w-full bg-white z-50">
+            <div className="w-full   pb-[2rem] bg-white   flex justify-between  items-center text-nowrap">
               <span className="font text-2xl md:text-7xl trackong-wider">
                 Our most popular trekking
               </span>
